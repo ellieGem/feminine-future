@@ -1,0 +1,301 @@
+.about {
+  margin-top: 70px;
+}
+
+/* Page Header */
+.page-header {
+  background: linear-gradient(135deg, var(--primary-maroon) 0%, var(--light-maroon) 100%);
+  color: white;
+  padding: 100px 0 80px;
+  text-align: center;
+}
+
+.page-header h1 {
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.page-header p {
+  font-size: 1.3rem;
+  color: rgba(255, 255, 255, 0.95);
+  font-weight: 300;
+}
+
+/* Our Story */
+.our-story {
+  background-color: white;
+}
+
+.story-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.story-text h2 {
+  text-align: left;
+  margin-bottom: 30px;
+}
+
+.story-text p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--gray-text);
+  margin-bottom: 20px;
+}
+
+.story-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-placeholder {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 40px rgba(139, 71, 86, 0.15);
+}
+
+.image-placeholder svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Mission & Vision */
+.mission-vision {
+  background-color: var(--cream);
+}
+
+.mission-vision-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.mission-box,
+.vision-box {
+  padding: 50px 40px;
+  text-align: center;
+}
+
+.box-icon {
+  font-size: 4rem;
+  margin-bottom: 25px;
+}
+
+.mission-box h3,
+.vision-box h3 {
+  font-size: 1.8rem;
+  color: var(--primary-maroon);
+  margin-bottom: 20px;
+}
+
+.mission-box p,
+.vision-box p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: var(--gray-text);
+}
+
+/* Core Values */
+.values-section {
+  background-color: white;
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin-top: 50px;
+}
+
+.value-card {
+  padding: 35px 30px;
+  text-align: center;
+  border-left: 4px solid var(--primary-maroon);
+}
+
+.value-card h3 {
+  font-size: 1.4rem;
+  color: var(--primary-maroon);
+  margin-bottom: 15px;
+}
+
+.value-card p {
+  color: var(--gray-text);
+  line-height: 1.6;
+}
+
+/* Team Section */
+.team-section {
+  background-color: var(--cream);
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 35px;
+  margin-top: 50px;
+}
+
+.team-card {
+  text-align: center;
+  padding: 35px 25px;
+}
+
+.team-avatar {
+  width: 120px;
+  height: 120px;
+  margin: 0 auto 20px;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 5px 20px rgba(139, 71, 86, 0.2);
+}
+
+.team-avatar svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.team-card h3 {
+  font-size: 1.3rem;
+  color: var(--primary-maroon);
+  margin-bottom: 8px;
+}
+
+.team-card .role {
+  color: var(--light-maroon);
+  font-weight: 500;
+  font-size: 0.95rem;
+  margin-bottom: 15px;
+}
+
+.team-card .bio {
+  color: var(--gray-text);
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+/* About CTA */
+.about-cta {
+  background-color: white;
+}
+
+.cta-box {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.cta-box h2 {
+  font-size: 2.5rem;
+  color: var(--primary-maroon);
+  margin-bottom: 20px;
+}
+
+.cta-box p {
+  font-size: 1.2rem;
+  color: var(--gray-text);
+  margin-bottom: 35px;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .story-content {
+    gap: 40px;
+  }
+
+  .page-header h1 {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .page-header {
+    padding: 80px 0 60px;
+  }
+
+  .page-header h1 {
+    font-size: 2.5rem;
+    padding: 0 15px;
+  }
+
+  .page-header p {
+    font-size: 1.1rem;
+    padding: 0 15px;
+  }
+
+  .story-content {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .story-image {
+    order: -1;
+  }
+
+  .story-text h2 {
+    text-align: center;
+  }
+
+  .mission-vision-grid,
+  .values-grid,
+  .team-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .cta-box h2 {
+    font-size: 2rem;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .cta-buttons .btn {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .page-header h1 {
+    font-size: 2rem;
+  }
+
+  .page-header p {
+    font-size: 1rem;
+  }
+
+  .mission-box,
+  .vision-box {
+    padding: 35px 25px;
+  }
+
+  .value-card,
+  .team-card {
+    padding: 25px 20px;
+  }
+
+  .cta-box h2 {
+    font-size: 1.8rem;
+  }
+}
