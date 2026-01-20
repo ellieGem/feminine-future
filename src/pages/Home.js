@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { Link } from 'react-router-dom';
 import './Home.css';
 
@@ -31,32 +31,7 @@ function Home() {
     { number: 15, label: 'Regions Covered', suffix: '' }
   ];
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting && !hasAnimated) {
-            setHasAnimated(true);
-            animateCounters();
-          }
-        });
-      },
-      { threshold: 0.3 }
-    );
-
-    const currentRef = statsRef.current;
-    if (currentRef) {
-      observer.observe(currentRef);
-    }
-
-    return () => {
-      if (currentRef) {
-        observer.unobserve(currentRef);
-      }
-    };
-  }, [hasAnimated, animateCounters]);
-
-  const animateCounters = () => {
+  const animateCounters = useCallback(() => {
     const duration = 2000; // 2 seconds
     const frameRate = 1000 / 60; // 60fps
     const totalFrames = Math.round(duration / frameRate);
@@ -89,7 +64,32 @@ function Home() {
         }
       }, frameRate);
     });
-  };
+  }, [stats]);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting && !hasAnimated) {
+            setHasAnimated(true);
+            animateCounters();
+          }
+        });
+      },
+      { threshold: 0.3 }
+    );
+
+    const currentRef = statsRef.current;
+    if (currentRef) {
+      observer.observe(currentRef);
+    }
+
+    return () => {
+      if (currentRef) {
+        observer.unobserve(currentRef);
+      }
+    };
+  }, [hasAnimated, animateCounters]);
 
   return (
     <div className="home">

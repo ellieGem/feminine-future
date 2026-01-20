@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useCallback } from 'react';
 import './Gallery.css';
 
 function Gallery() {
@@ -135,32 +135,7 @@ function Gallery() {
     { number: 15, label: 'Regions Covered', suffix: '' }
   ];
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting && !hasAnimated) {
-            setHasAnimated(true);
-            animateEventCounters();
-          }
-        });
-      },
-      { threshold: 0.3 }
-    );
-
-    const currentRef = eventStatsRef.current;
-    if (currentRef) {
-      observer.observe(currentRef);
-    }
-
-    return () => {
-      if (currentRef) {
-        observer.unobserve(currentRef);
-      }
-    };
-  }, [hasAnimated, animateEventCounters]);
-
-  const animateEventCounters = () => {
+  const animateEventCounters = useCallback(() => {
     const duration = 2000;
     const frameRate = 1000 / 60;
     const totalFrames = Math.round(duration / frameRate);
@@ -192,7 +167,32 @@ function Gallery() {
         }
       }, frameRate);
     });
-  };
+  }, [eventStats]);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting && !hasAnimated) {
+            setHasAnimated(true);
+            animateEventCounters();
+          }
+        });
+      },
+      { threshold: 0.3 }
+    );
+
+    const currentRef = eventStatsRef.current;
+    if (currentRef) {
+      observer.observe(currentRef);
+    }
+
+    return () => {
+      if (currentRef) {
+        observer.unobserve(currentRef);
+      }
+    };
+  }, [hasAnimated, animateEventCounters]);
 
   // Function to generate color variations for placeholder images
   // const getImagePlaceholder = (id) => {

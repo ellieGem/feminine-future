@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useCallback } from 'react';
 import './Impact.css';
 
 function Impact() {
@@ -56,32 +56,7 @@ function Impact() {
     }
   ];
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting && !hasAnimated) {
-            setHasAnimated(true);
-            animateImpactCounters();
-          }
-        });
-      },
-      { threshold: 0.2 }
-    );
-
-    const currentRef = impactStatsRef.current;
-    if (currentRef) {
-      observer.observe(currentRef);
-    }
-
-    return () => {
-      if (currentRef) {
-        observer.unobserve(currentRef);
-      }
-    };
-  }, [hasAnimated, animateImpactCounters]);
-
-  const animateImpactCounters = () => {
+  const animateImpactCounters = useCallback(() => {
     const duration = 2000;
     const frameRate = 1000 / 60;
     const totalFrames = Math.round(duration / frameRate);
@@ -113,7 +88,32 @@ function Impact() {
         }
       }, frameRate);
     });
-  };
+  }, [impactStats]);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting && !hasAnimated) {
+            setHasAnimated(true);
+            animateImpactCounters();
+          }
+        });
+      },
+      { threshold: 0.2 }
+    );
+
+    const currentRef = impactStatsRef.current;
+    if (currentRef) {
+      observer.observe(currentRef);
+    }
+
+    return () => {
+      if (currentRef) {
+        observer.unobserve(currentRef);
+      }
+    };
+  }, [hasAnimated, animateImpactCounters]);
 
   const testimonials = [
     {
