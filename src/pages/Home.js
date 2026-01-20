@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef, useCallback } from 'react';
+import React, { useState, useEffect, useRef, useCallback, useMemo } from 'react';
 import { Link } from 'react-router-dom';
 import './Home.css';
 
@@ -24,12 +24,12 @@ function Home() {
     }
   ];
 
-  const stats = [
+  const stats = useMemo(() => [
     { number: 5000, label: 'Girls Empowered', suffix: '+' },
     { number: 150, label: 'Partner Schools', suffix: '+' },
     { number: 200, label: 'Mentors', suffix: '+' },
     { number: 15, label: 'Regions Covered', suffix: '' }
-  ];
+  ], []);
 
   const animateCounters = useCallback(() => {
     const duration = 2000; // 2 seconds

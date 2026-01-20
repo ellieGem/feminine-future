@@ -1,11 +1,11 @@
-import React, { useState, useEffect, useRef, useCallback } from 'react';
+import React, { useState, useEffect, useRef, useCallback, useMemo } from 'react';
 import './Impact.css';
 
 function Impact() {
   const [hasAnimated, setHasAnimated] = useState(false);
   const impactStatsRef = useRef(null);
 
-  const impactStats = [
+  const impactStats = useMemo(() => [
     {
       number: 5000,
       label: 'Girls Empowered',
@@ -54,7 +54,7 @@ function Impact() {
       description: 'Across Ghana, from urban to rural communities',
       suffix: ''
     }
-  ];
+  ], []);
 
   const animateImpactCounters = useCallback(() => {
     const duration = 2000;

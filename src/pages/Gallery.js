@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef, useCallback } from 'react';
+import React, { useState, useEffect, useRef, useCallback, useMemo } from 'react';
 import './Gallery.css';
 
 function Gallery() {
@@ -128,12 +128,12 @@ function Gallery() {
     setSelectedImage(null);
   };
 
-  const eventStats = [
+  const eventStats = useMemo(() => [
     { number: 50, label: 'Events Held', suffix: '+' },
     { number: 10000, label: 'Attendees', suffix: '+' },
     { number: 25, label: 'Partner Organizations', suffix: '+' },
     { number: 15, label: 'Regions Covered', suffix: '' }
-  ];
+  ], []);
 
   const animateEventCounters = useCallback(() => {
     const duration = 2000;
