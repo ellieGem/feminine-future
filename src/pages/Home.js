@@ -44,16 +44,17 @@ function Home() {
       { threshold: 0.3 }
     );
 
-    if (statsRef.current) {
-      observer.observe(statsRef.current);
+    const currentRef = statsRef.current;
+    if (currentRef) {
+      observer.observe(currentRef);
     }
 
     return () => {
-      if (statsRef.current) {
-        observer.unobserve(statsRef.current);
+      if (currentRef) {
+        observer.unobserve(currentRef);
       }
     };
-  }, [hasAnimated]);
+  }, [hasAnimated, animateCounters]);
 
   const animateCounters = () => {
     const duration = 2000; // 2 seconds
@@ -65,7 +66,7 @@ function Home() {
       if (!element) return;
 
       let frame = 0;
-      const increment = stat.number / totalFrames;
+      // const increment = stat.number / totalFrames;
 
       const counter = setInterval(() => {
         frame++;

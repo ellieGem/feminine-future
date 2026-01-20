@@ -69,16 +69,17 @@ function Impact() {
       { threshold: 0.2 }
     );
 
-    if (impactStatsRef.current) {
-      observer.observe(impactStatsRef.current);
+    const currentRef = impactStatsRef.current;
+    if (currentRef) {
+      observer.observe(currentRef);
     }
 
     return () => {
-      if (impactStatsRef.current) {
-        observer.unobserve(impactStatsRef.current);
+      if (currentRef) {
+        observer.unobserve(currentRef);
       }
     };
-  }, [hasAnimated]);
+  }, [hasAnimated, animateImpactCounters]);
 
   const animateImpactCounters = () => {
     const duration = 2000;

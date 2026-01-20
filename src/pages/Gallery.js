@@ -148,16 +148,17 @@ function Gallery() {
       { threshold: 0.3 }
     );
 
-    if (eventStatsRef.current) {
-      observer.observe(eventStatsRef.current);
+    const currentRef = eventStatsRef.current;
+    if (currentRef) {
+      observer.observe(currentRef);
     }
 
     return () => {
-      if (eventStatsRef.current) {
-        observer.unobserve(eventStatsRef.current);
+      if (currentRef) {
+        observer.unobserve(currentRef);
       }
     };
-  }, [hasAnimated]);
+  }, [hasAnimated, animateEventCounters]);
 
   const animateEventCounters = () => {
     const duration = 2000;
@@ -194,15 +195,15 @@ function Gallery() {
   };
 
   // Function to generate color variations for placeholder images
-  const getImagePlaceholder = (id) => {
-    const colors = [
-      'linear-gradient(135deg, #8B4756 0%, #A86F7B 100%)',
-      'linear-gradient(135deg, #A86F7B 0%, #E8D5D9 100%)',
-      'linear-gradient(135deg, #8B4756 0%, #E8D5D9 100%)',
-      'linear-gradient(135deg, #A86F7B 0%, #8B4756 100%)'
-    ];
-    return colors[id % colors.length];
-  };
+  // const getImagePlaceholder = (id) => {
+  //   const colors = [
+  //     'linear-gradient(135deg, #8B4756 0%, #A86F7B 100%)',
+  //     'linear-gradient(135deg, #A86F7B 0%, #E8D5D9 100%)',
+  //     'linear-gradient(135deg, #8B4756 0%, #E8D5D9 100%)',
+  //     'linear-gradient(135deg, #A86F7B 0%, #8B4756 100%)'
+  //   ];
+  //   return colors[id % colors.length];
+  // };
 
   return (
     <div className="gallery">
