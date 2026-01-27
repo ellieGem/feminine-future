@@ -1,11 +1,12 @@
 .home {
-  margin-top: 70px;
+  margin-top: 0;
+  padding-top: 0;
 }
 
 /* Hero Section */
 .hero {
   position: relative;
-  height: 90vh;
+  height: 100vh;
   min-height: 600px;
   display: flex;
   align-items: center;
@@ -15,6 +16,8 @@
   background-position: center;
   background-repeat: no-repeat;
   overflow: hidden;
+  margin-top: -70px;
+  padding-top: 70px;
 }
 
 .hero::before {

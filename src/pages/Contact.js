@@ -64,7 +64,7 @@ function Contact() {
     {
       icon: '📍',
       title: 'Visit Us',
-      details: ['Feminine Future Foundation', 'East Legon, Accra', 'Ghana']
+      details: ['Feminine Future Foundation', 'Community 18, Tema', 'Ghana']
     },
     {
       icon: '📧',
@@ -74,7 +74,7 @@ function Contact() {
     {
       icon: '📞',
       title: 'Call Us',
-      details: ['+233 XX XXX XXXX', '+233 XX XXX XXXX', 'Mon-Fri: 9AM - 5PM']
+      details: ['+233 55 391 3358', 'Mon-Fri: 9AM - 5PM']
     },
     {
       icon: '🌐',

@@ -25,10 +25,10 @@ function Home() {
   ];
 
   const stats = useMemo(() => [
-    { number: 5000, label: 'Girls Empowered', suffix: '+' },
-    { number: 150, label: 'Partner Schools', suffix: '+' },
-    { number: 200, label: 'Mentors', suffix: '+' },
-    { number: 15, label: 'Regions Covered', suffix: '' }
+    { number: 1500, label: 'Girls Empowered', suffix: '+' },
+    { number: 13, label: 'Partner Schools', suffix: '+' },
+    { number: 20, label: 'Mentors', suffix: '+' },
+    { number: 10, label: 'Communities Covered', suffix: '+' }
   ], []);
 
   const animateCounters = useCallback(() => {
@@ -116,7 +116,7 @@ function Home() {
           <div className="mission-content">
             <h2 className="section-title">Our Mission</h2>
             <p className="mission-text">
-              Feminine Future is dedicated to transforming the lives of girls and young women across Ghana 
+              The Feminine Future Foundation is dedicated to transforming the lives of girls and young women across Ghana 
               by providing access to quality education, meaningful mentorship, and economic opportunities. 
               We believe that when you empower a girl, you empower an entire community.
             </p>

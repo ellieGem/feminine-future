@@ -29,8 +29,11 @@ function Navigation() {
     <nav className={`navigation ${isScrolled ? 'scrolled' : ''}`}>
       <div className="container nav-container">
         <Link to="/" className="logo">
-          <h1>Feminine Future</h1>
-          <p className="logo-tagline">Empowering Girls, Building Leaders</p>
+          <img className="logo-image" src="/logo.png" alt="The Feminine Future Foundation Logo" />
+          <div className="logo-text">
+            <h5>The Feminine Future Foundation</h5>
+            <p className="logo-tagline">Empowering Girls, Changing Lives</p>
+          </div>
         </Link>
 
         <button 

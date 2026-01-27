@@ -7,50 +7,50 @@ function Impact() {
 
   const impactStats = useMemo(() => [
     {
-      number: 5000,
+      number: 1500,
       label: 'Girls Empowered',
       description: 'Young women supported through our programs since 2015',
       suffix: '+'
     },
+    // {
+    //   number: 500,
+    //   label: 'Scholarships Awarded',
+    //   description: 'Full and partial scholarships for education',
+    //   suffix: '+'
+    // },
     {
-      number: 500,
-      label: 'Scholarships Awarded',
-      description: 'Full and partial scholarships for education',
-      suffix: '+'
-    },
-    {
-      number: 200,
+      number: 20,
       label: 'Active Mentors',
       description: 'Professionals guiding our beneficiaries',
       suffix: '+'
     },
     {
-      number: 150,
+      number: 13,
       label: 'Partner Schools',
       description: 'Educational institutions collaborating with us',
       suffix: '+'
     },
+    // {
+    //   number: 1200,
+    //   label: 'Skills Trained',
+    //   description: 'Girls equipped with vocational and tech skills',
+    //   suffix: '+'
+    // },
+    // {
+    //   number: 85,
+    //   label: 'Employment Rate',
+    //   description: 'Program graduates employed or in higher education',
+    //   suffix: '%'
+    // },
+    // {
+    //   number: 300,
+    //   label: 'Businesses Started',
+    //   description: 'Young women entrepreneurs we\'ve supported',
+    //   suffix: '+'
+    // },
     {
-      number: 1200,
-      label: 'Skills Trained',
-      description: 'Girls equipped with vocational and tech skills',
-      suffix: '+'
-    },
-    {
-      number: 85,
-      label: 'Employment Rate',
-      description: 'Program graduates employed or in higher education',
-      suffix: '%'
-    },
-    {
-      number: 300,
-      label: 'Businesses Started',
-      description: 'Young women entrepreneurs we\'ve supported',
-      suffix: '+'
-    },
-    {
-      number: 15,
-      label: 'Regions Covered',
+      number: 10,
+      label: 'Communities Covered',
       description: 'Across Ghana, from urban to rural communities',
       suffix: ''
     }
@@ -168,34 +168,34 @@ function Impact() {
 
   const achievements = [
     {
-      year: '2015',
+      year: '2024',
       title: 'Foundation Established',
-      description: 'Started with 20 girls in Accra'
+      description: 'Started with 56 girls'
     },
     {
-      year: '2017',
-      title: 'Regional Expansion',
-      description: 'Expanded to 5 regions across Ghana'
+      year: '2025',
+      title: 'Community Expansion',
+      description: 'Expanded to 10 communities across Accra'
     },
     {
-      year: '2019',
-      title: '1,000 Girls Milestone',
+      year: '2025',
+      title: '1,000 Girls Empowered',
       description: 'Reached 1,000 girls empowered'
     },
     {
-      year: '2021',
-      title: 'Tech Hub Launch',
-      description: 'Opened our first technology training center'
+      year: '2026',
+      title: 'Reading: A lost Art Launch',
+      description: 'Launched our reading program across 3 schools'
     },
+    // {
+    //   year: '2023',
+    //   title: 'National Recognition',
+    //   description: 'Awarded National Excellence in Education'
+    // },
     {
-      year: '2023',
-      title: 'National Recognition',
-      description: 'Awarded National Excellence in Education'
-    },
-    {
-      year: '2024',
-      title: '5,000 Girls Impact',
-      description: 'Celebrating 5,000+ lives transformed'
+      year: '2026',
+      title: '2,000 Girls Impact',
+      description: 'Celebrating 2,000+ lives transformed'
     }
   ];
 
