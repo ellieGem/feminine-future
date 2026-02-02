@@ -9,7 +9,7 @@ function Impact() {
     {
       number: 1500,
       label: 'Girls Empowered',
-      description: 'Young women supported through our programs since 2015',
+      description: 'Young women supported through our programs since 2024',
       suffix: '+'
     },
     // {
@@ -51,7 +51,7 @@ function Impact() {
     {
       number: 10,
       label: 'Communities Covered',
-      description: 'Across Ghana, from urban to rural communities',
+      description: 'In Accra, Ghana, from urban to rural communities',
       suffix: ''
     }
   ], []);
@@ -122,7 +122,7 @@ function Impact() {
       role: 'Medical Student, University of Ghana',
       location: 'Accra',
       quote: 'Feminine Future didn\'t just give me a scholarship - they gave me hope, mentorship, and a community that believed in me. Today, I\'m in my third year of medical school, and I dream of becoming a gynecologist to serve women in rural Ghana.',
-      year: '2020 Cohort'
+      // year: '2020 Cohort'
     },
     {
       id: 2,
@@ -130,7 +130,7 @@ function Impact() {
       role: 'Entrepreneur & Fashion Designer',
       location: 'Kumasi',
       quote: 'The skills training and microloan program transformed my life. I started with just a sewing machine and a dream. Now, I employ three young women and we supply school uniforms to five schools in our region.',
-      year: '2019 Cohort'
+      // year: '2019 Cohort'
     },
     {
       id: 3,
@@ -138,7 +138,7 @@ function Impact() {
       role: 'Software Developer',
       location: 'Takoradi',
       quote: 'I never imagined a girl from a fishing village could become a software developer. The tech training program opened doors I didn\'t know existed. Now I work remotely for an international company and support my entire family.',
-      year: '2021 Cohort'
+      // year: '2021 Cohort'
     },
     {
       id: 4,
@@ -146,7 +146,7 @@ function Impact() {
       role: 'Teacher & Community Leader',
       location: 'Tamale',
       quote: 'My mentor taught me that education is not just about learning - it\'s about giving back. After completing my degree, I returned to my community to teach and now coordinate a girls\' club inspiring the next generation.',
-      year: '2018 Cohort'
+      // year: '2018 Cohort'
     },
     {
       id: 5,
@@ -154,7 +154,7 @@ function Impact() {
       role: 'Accountant',
       location: 'Accra',
       quote: 'Coming from a home where I was told girls don\'t need higher education, Feminine Future changed my family\'s mindset. I graduated top of my class, and now my three younger sisters are all in school too.',
-      year: '2019 Cohort'
+      // year: '2019 Cohort'
     },
     {
       id: 6,
@@ -162,7 +162,7 @@ function Impact() {
       role: 'Nurse & Health Educator',
       location: 'Cape Coast',
       quote: 'The health and wellness program saved my life when I was struggling with mental health. They connected me with counseling and supported my nursing education. Now I\'m paying it forward by educating girls about health and wellness.',
-      year: '2020 Cohort'
+      // year: '2020 Cohort'
     }
   ];
 

@@ -4,24 +4,34 @@ import "./About.css";
 function About() {
   const team = [
     {
-      name: "Dr. Abena Osei",
+      name: "Ms. Miriam Suttah",
       role: "Founder & Executive Director",
-      bio: "Passionate advocate for girls' education with 15+ years of experience in non-profit leadership.",
+      // bio: "Passionate advocate for girls' education with 15+ years of experience in non-profit leadership.",
     },
     {
-      name: "Kwame Mensah",
+      name: "Ms. Nana Akua Bondziwaa Owusu",
+      role: "Deputy Executive Director",
+      // bio: "Educational strategist dedicated to creating impactful learning experiences for young women.",
+    },
+    {
+      name: "MS. Nancy Phoebe Appiah",
       role: "Director of Programs",
-      bio: "Educational strategist dedicated to creating impactful learning experiences for young women.",
+      // bio: "Expert in building sustainable partnerships that drive meaningful social change.",
     },
     {
-      name: "Efua Asante",
-      role: "Head of Partnerships",
-      bio: "Expert in building sustainable partnerships that drive meaningful social change.",
+      name: "Ms. Natty Amoah",
+      role: "Director of Finance & Administration",
+      // bio: "Ensuring transparent and efficient use of resources to maximize impact for beneficiaries.",
     },
     {
-      name: "Kofi Adjei",
-      role: "Financial Director",
-      bio: "Ensuring transparent and efficient use of resources to maximize impact for beneficiaries.",
+      name: "Ms. Isabella Ofosuhene-Peasah",
+      role: "Director of Communication & Media Relations",
+      // bio: "Ensuring transparent and efficient use of resources to maximize impact for beneficiaries.",
+    },
+    {
+      name: "Mr. Paa Kofi Koranteng Obeng",
+      role: "Director of Policy & Advocacy",
+      // bio: "Ensuring transparent and efficient use of resources to maximize impact for beneficiaries.",
     },
   ];
 

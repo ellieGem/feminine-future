@@ -69,7 +69,7 @@ function Contact() {
     {
       icon: '📧',
       title: 'Email Us',
-      details: ['info@femininefuture.org', 'partnerships@femininefuture.org', 'support@femininefuture.org']
+      details: ['info@femininefuture.org']
     },
     {
       icon: '📞',
@@ -79,7 +79,7 @@ function Contact() {
     {
       icon: '🌐',
       title: 'Follow Us',
-      details: ['@FeminineFutureGH', 'Facebook | Instagram', 'Twitter | LinkedIn']
+      details: ['@thefemininefuturefoundation', 'Facebook | Instagram', 'youTube | LinkedIn']
     }
   ];
 
@@ -109,11 +109,11 @@ function Contact() {
       description: 'Support our mission financially and help us empower more girls.',
       action: 'Donate Now'
     },
-    {
-      title: 'Hire Our Graduates',
-      description: 'Connect with talented young women completing our programs.',
-      action: 'Recruit'
-    }
+    // {
+    //   title: 'Hire Our Graduates',
+    //   description: 'Connect with talented young women completing our programs.',
+    //   action: 'Recruit'
+    // }
   ];
 
   return (
@@ -309,7 +309,7 @@ function Contact() {
               <text x="400" y="280" textAnchor="middle" fill="var(--primary-maroon)" 
                     fontSize="24" fontWeight="600">Feminine Future Foundation</text>
               <text x="400" y="310" textAnchor="middle" fill="var(--gray-text)" 
-                    fontSize="18">East Legon, Accra, Ghana</text>
+                    fontSize="18">Community 18, Accra, Ghana</text>
             </svg>
           </div>
         </div>

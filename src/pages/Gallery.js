@@ -7,104 +7,176 @@ function Gallery() {
   const [hasAnimated, setHasAnimated] = useState(false);
   const eventStatsRef = useRef(null);
 
-  // Gallery images with real photos
+  // Gallery images from 2024 educational mentorship session
   const images = [
     {
       id: 1,
-      category: 'education',
-      title: 'Scholarship Award Ceremony',
-      description: 'Celebrating 50 girls receiving full scholarships for secondary education',
-      date: 'December 2023',
-      imageUrl: 'https://images.unsplash.com/photo-1497633762265-9d179a990aa6?w=800&q=80'
+      category: 'mentorship',
+      title: '',
+      description: 'First meeting between mentors and mentees.',
+      // date: 'January 2024',
+      imageUrl: '/images/img1jpg.jpg'
     },
     {
       id: 2,
       category: 'mentorship',
-      title: 'Mentorship Kickoff Event',
-      description: 'First meeting between mentors and mentees in our 2024 cohort',
-      date: 'January 2024',
-      imageUrl: 'https://images.unsplash.com/photo-1544027993-37dbfe43562a?w=800&q=80'
+      title: '',
+      description: 'Girls learning and growing in our mentorship program',
+      // date: 'February 2024',
+      imageUrl: '/images/img2.jpg'
     },
     {
       id: 3,
-      category: 'skills',
-      title: 'Tech Skills Workshop',
-      description: 'Girls learning coding and digital skills at our Accra center',
-      date: 'February 2024',
-      imageUrl: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&q=80'
+      category: 'mentorship',
+      title: '',
+      description: 'Mentorship in action - building connections and skills',
+      // date: 'March 2024',
+      imageUrl: '/images/img3.jpg'
     },
     {
       id: 4,
-      category: 'leadership',
-      title: 'Young Leaders Summit',
-      description: 'Annual leadership conference bringing together 200 girls from across Ghana',
-      date: 'March 2024',
-      imageUrl: 'https://images.unsplash.com/photo-1509062522246-3755977927d7?w=800&q=80'
+      category: 'mentorship',
+      title: '',
+      description: 'Participants engaging in meaningful mentorship experiences',
+      // date: 'April 2024',
+      imageUrl: '/images/img4.jpg'
     },
     {
       id: 5,
-      category: 'community',
-      title: 'Community Outreach',
-      description: 'Our team visiting rural communities to identify and support talented girls',
-      date: 'April 2024',
-      imageUrl: 'https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=800&q=80'
+      category: 'mentorship',
+      title: '',
+      description: 'Collaborative learning and mentorship sessions',
+      // date: 'May 2024',
+      imageUrl: '/images/img5.jpg'
     },
     {
       id: 6,
-      category: 'education',
-      title: 'Library Opening',
-      description: 'Inauguration of our new learning resource center in Kumasi',
-      date: 'May 2024',
-      imageUrl: 'https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=800&q=80'
+      category: 'mentorship',
+      title: '',
+      description: 'Empowering young women through mentorship',
+      // date: 'June 2024',
+      imageUrl: '/images/img6.jpg'
     },
     {
       id: 7,
-      category: 'skills',
-      title: 'Entrepreneurship Training',
-      description: 'Young women developing business plans for their startups',
-      date: 'June 2024',
-      imageUrl: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800&q=80'
+      category: 'mentorship',
+      title: '',
+      description: 'Mentors sharing insights and guidance with mentees',
+      // date: 'July 2024',
+      imageUrl: '/images/img7.jpg'
     },
     {
       id: 8,
       category: 'mentorship',
-      title: 'Career Day Event',
-      description: 'Professionals sharing career insights with aspiring young women',
-      date: 'July 2024',
-      imageUrl: 'https://images.unsplash.com/photo-1531545514256-b1400bc00f31?w=800&q=80'
+      title: '',
+      description: 'Building confidence through mentorship and support',
+      // date: 'August 2024',
+      imageUrl: '/images/img8.jpg'
     },
     {
       id: 9,
-      category: 'community',
-      title: 'Graduation Celebration',
-      description: '100 girls celebrating their graduation from our programs',
-      date: 'August 2024',
-      imageUrl: 'https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=800&q=80'
+      category: 'mentorship',
+      title: '',
+      description: 'Mentorship moments of growth and inspiration',
+      // date: 'September 2024',
+      imageUrl: '/images/img9.jpg'
     },
     {
       id: 10,
-      category: 'leadership',
-      title: 'Public Speaking Workshop',
-      description: 'Building confidence through communication skills training',
-      date: 'September 2024',
-      imageUrl: 'https://images.unsplash.com/photo-1591608971362-f08b2a75731a?w=800&q=80'
+      category: 'mentorship',
+      title: '',
+      description: 'Girls developing skills through mentorship programs',
+      // date: 'October 2024',
+      imageUrl: '/images/img10.jpg'
     },
     {
       id: 11,
-      category: 'skills',
-      title: 'Vocational Training',
-      description: 'Girls learning tailoring and fashion design skills',
-      date: 'October 2024',
-      imageUrl: 'https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=800&q=80'
+      category: 'mentorship',
+      title: '',
+      description: 'Celebrating mentorship achievements and progress',
+      // date: 'November 2024',
+      imageUrl: '/images/img11.jpg'
     },
     {
       id: 12,
-      category: 'community',
-      title: 'Fundraising Gala',
-      description: 'Annual gala raising funds to support more girls in 2025',
-      date: 'November 2024',
-      imageUrl: 'https://images.unsplash.com/photo-1511632765486-a01980e01a18?w=800&q=80'
+      category: 'mentorship',
+      title: '',
+      description: 'Mentorship sessions fostering education and growth',
+      // date: 'December 2023',
+      imageUrl: '/images/img12.jpg'
+    },
+    {
+      id: 13,
+      category: 'mentorship',
+      title: '',
+      description: 'Mentors and mentees connecting for a brighter future',
+      // date: 'January 2024',
+      imageUrl: '/images/img13.jpg'
+    },
+    {
+      id: 14,
+      category: 'mentorship',
+      title: '',
+      description: 'Building lasting mentorship relationships',
+      // date: 'February 2024',
+      imageUrl: '/images/img14.jpg'
+    },
+    {
+      id: 15,
+      category: 'mentorship',
+      title: '',
+      description: 'Mentorship creating opportunities for success',
+      // date: 'March 2024',
+      imageUrl: '/images/img15.jpg'
+    },
+    {
+      id: 16,
+      category: 'mentorship',
+      title: '',
+      description: 'Transformative mentorship experiences',
+      // date: 'April 2024',
+      imageUrl: '/images/img16.jpg'
+    },
+    {
+      id: 17,
+      category: 'mentorship',
+      title: 'Mentorship Retreat 2024',
+      description: 'Intensive retreat bringing mentors and mentees together for deeper connections',
+      // date: 'May 2024',
+      imageUrl: '/images/img17.jpg'
     }
+    // {
+    //   id: 18,
+    //   category: 'skills',
+    //   title: '',
+    //   description: 'Skills training and development programs',
+    //   date: 'June 2024',
+    //   imageUrl: '/images/img18.jpg'
+    // }
+    // {
+    //   id: 19,
+    //   category: 'education',
+    //   title: '',
+    //   description: 'Educational opportunities and resources',
+    //   date: 'July 2024',
+    //   imageUrl: '/images/img19.jpg'
+    // }
+    // {
+    //   id: 20,
+    //   category: 'leadership',
+    //   title: '',
+    //   description: 'Leadership development and training',
+    //   date: 'August 2024',
+    //   imageUrl: '/images/img20.jpg'
+    // }
+    // {
+    //   id: 21,
+    //   category: 'community',
+    //   title: '',
+    //   description: 'Community engagement and impact',
+    //   date: 'September 2024',
+    //   imageUrl: '/images/img21.jpg'
+    // }
   ];
 
   const categories = [
@@ -252,15 +324,15 @@ function Gallery() {
                 >
                   <div className="gallery-overlay">
                     <div className="overlay-content">
-                      <h3>{image.title}</h3>
-                      <p className="overlay-date">{image.date}</p>
+                      {/* <h3>{image.title}</h3>
+                      <p className="overlay-date">{image.date}</p> */}
                     </div>
                   </div>
                 </div>
                 <div className="gallery-info">
-                  <h4>{image.title}</h4>
+                  {/* <h4>{image.title}</h4> */}
                   <p>{image.description}</p>
-                  <span className="gallery-date">{image.date}</span>
+                  {/* <span className="gallery-date">{image.date}</span> */}
                 </div>
               </div>
             ))}
@@ -275,7 +347,7 @@ function Gallery() {
       </section>
 
       {/* Event Stats */}
-      <section className="section event-stats" ref={eventStatsRef}>
+      {/* <section className="section event-stats" ref={eventStatsRef}>
         <div className="container">
           <h2 className="section-title" style={{ color: 'white' }}>Events in Numbers</h2>
           <div className="stats-grid">
@@ -287,7 +359,7 @@ function Gallery() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Lightbox */}
       {selectedImage && (

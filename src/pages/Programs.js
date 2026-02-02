@@ -14,20 +14,20 @@ function Programs() {
   });
 
   const programs = [
+    // {
+    //   id: 1,
+    //   title: 'Scholarship Program',
+    //   icon: '🎓',
+    //   description: 'Providing full and partial scholarships to deserving girls for primary, secondary, and tertiary education.',
+    //   benefits: [
+    //     'Full tuition coverage',
+    //     'Learning materials and supplies',
+    //     'Mentorship support',
+    //     'Career guidance'
+    //   ]
+    // },
     {
       id: 1,
-      title: 'Scholarship Program',
-      icon: '🎓',
-      description: 'Providing full and partial scholarships to deserving girls for primary, secondary, and tertiary education.',
-      benefits: [
-        'Full tuition coverage',
-        'Learning materials and supplies',
-        'Mentorship support',
-        'Career guidance'
-      ]
-    },
-    {
-      id: 2,
       title: 'Mentorship Initiative',
       icon: '🤝',
       description: 'Connecting young women with successful female professionals who guide and inspire them.',
@@ -39,7 +39,7 @@ function Programs() {
       ]
     },
     {
-      id: 3,
+      id: 2,
       title: 'Skills Training',
       icon: '💻',
       description: 'Equipping girls with practical skills in technology, entrepreneurship, and vocational trades.',
@@ -51,7 +51,7 @@ function Programs() {
       ]
     },
     {
-      id: 4,
+      id: 3,
       title: 'Leadership Academy',
       icon: '👑',
       description: 'Developing the next generation of female leaders through comprehensive leadership training.',
@@ -62,30 +62,30 @@ function Programs() {
         'Community service projects'
       ]
     },
-    {
-      id: 5,
-      title: 'Economic Empowerment',
-      icon: '💼',
-      description: 'Supporting young women entrepreneurs with microloans, business training, and market access.',
-      benefits: [
-        'Seed funding and microloans',
-        'Business plan development',
-        'Marketing support',
-        'Financial literacy training'
-      ]
-    },
-    {
-      id: 6,
-      title: 'Health & Wellness',
-      icon: '❤️',
-      description: 'Promoting physical and mental health through education, counseling, and healthcare access.',
-      benefits: [
-        'Health education workshops',
-        'Mental health counseling',
-        'Healthcare access support',
-        'Wellness programs'
-      ]
-    }
+    // {
+    //   id: 5,
+    //   title: 'Economic Empowerment',
+    //   icon: '💼',
+    //   description: 'Supporting young women entrepreneurs with microloans, business training, and market access.',
+    //   benefits: [
+    //     'Seed funding and microloans',
+    //     'Business plan development',
+    //     'Marketing support',
+    //     'Financial literacy training'
+    //   ]
+    // },
+    // {
+    //   id: 4,
+    //   title: 'Health & Wellness',
+    //   icon: '❤️',
+    //   description: 'Promoting physical and mental health through education, counseling, and healthcare access.',
+    //   benefits: [
+    //     'Health education workshops',
+    //     'Mental health counseling',
+    //     'Healthcare access support',
+    //     'Wellness programs'
+    //   ]
+    // }
   ];
 
   const handleInputChange = (e) => {
