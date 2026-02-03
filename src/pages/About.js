@@ -64,7 +64,7 @@ function About() {
       <section className="page-header">
         <div className="container">
           <h1>About Feminine Future</h1>
-          <p>Building Leaders for Tomorrow, One Girl at a Time</p>
+          <p>Empowering Girls, Changing Lives</p>
         </div>
       </section>
 
@@ -93,37 +93,7 @@ function About() {
               </p>
             </div>
             <div className="story-image">
-              <div className="image-placeholder">
-                <svg
-                  viewBox="0 0 400 400"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <rect width="400" height="400" fill="var(--pale-maroon)" />
-                  <circle
-                    cx="200"
-                    cy="150"
-                    r="60"
-                    fill="var(--primary-maroon)"
-                  />
-                  <path
-                    d="M200 220 L200 320 M170 260 L200 220 L230 260 M160 320 L240 320"
-                    stroke="var(--primary-maroon)"
-                    strokeWidth="8"
-                    strokeLinecap="round"
-                  />
-                  <text
-                    x="200"
-                    y="370"
-                    textAnchor="middle"
-                    fill="var(--primary-maroon)"
-                    fontSize="16"
-                    fontWeight="600"
-                  >
-                    Empowering Girls
-                  </text>
-                </svg>
-              </div>
+              <img src="/images/img16.jpg" alt="Empowering Girls" />
             </div>
           </div>
         </div>
